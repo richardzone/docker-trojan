@@ -16,5 +16,8 @@ fi
 
 sed -i '' -e "s/CERT_PATH_TO_REPLACE/$CERT_PATH/" -e "s/KEY_PATH_TO_REPLACE/$KEY_PATH/" -e "s/PASSWORD_TO_REPLACE/$PASSWORD/" trojan.json
 
+# print Trojan version
+trojan -v
+
 # Run Trojan Server
 exec "$@"

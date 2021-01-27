@@ -1,9 +1,9 @@
-FROM debian:buster
+FROM ubuntu:rolling
 LABEL maintainer="Richard (https://github.com/richardzone)"
 EXPOSE 443
 
 RUN mkdir -p /trojan
-RUN apt-get update && apt-get install -y trojan/buster-backports
+RUN apt-get update && apt-get install -y trojan
 
 WORKDIR /trojan
 

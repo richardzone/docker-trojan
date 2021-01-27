@@ -8,6 +8,6 @@ RUN apt-get update && apt-get install -y trojan
 WORKDIR /trojan
 
 COPY . .
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/trojan/docker-entrypoint.sh"]
 
-CMD ["trojan", "-c", "trojan.json"]
+CMD ["trojan", "-c", "/trojan/trojan.json"]
